@@ -13,7 +13,7 @@ $exchangeSession = New-PSSession -ConfigurationName Microsoft.Exchange -Connecti
 Import-PSSession $exchangeSession -AllowClobber
 
 #get details of the user
-$user = Get-User 'alana'
+$user = Get-User '<enter name of the user here>'
 
 # Get all the distribution lists the user is a member of
 $distributionGroups = Get-DistributionGroup -Filter "Members -like '$($user.distinguishedName)'"
